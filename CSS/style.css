@@ -1,0 +1,102 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.relative-box {
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    margin: 0 auto;
+    position: relative;
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+    transition: all 2s easy-in 1s;
+
+}
+
+.absolute-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 2s;
+}
+
+.relative-box:hover {
+    background-color: orange;
+}
+
+.absolute-box:hover {
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: black;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+/* trasnform:rotate(-20deg) 
+transform:scale(2,2); 0.5 and -2 ატრიალებს.
+transform: skew(45deg, 40deg) იქს იგრეკითაც შეიძლება და ცალ-ცალკეც
+
+box shadow generator - html-css-js.com
+
+
+/* */
+/* 
+transition property 
+transition-timing-function:ease, ease-in, and etc.
+
+
+*/
+
+/* div {
+    width: 100px;
+    height: 300px;
+    background-color: red;
+    transition: 2s;
+}
+
+div:hover {
+    width: 300px;
+}
+} */
+
+.ball {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    border-radius: 100%;
+    /* წრე რო დაიწეროს 50%-ზე მეტი უნდა იყოს ბორდერ რადიუსი */
+    position: relative;
+    animation-name: jump;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-iteration-count: 3;
+
+    animation: jump 5s ease 2s alternate infinite;
+
+}
+
+@keyframes jump {
+    0% {
+        top: 0px;
+        background: red;
+        width: 100px;
+    }
+
+    100% {
+        top: 200px;
+        background: yellow;
+        width: 300px;
+    }
+}
